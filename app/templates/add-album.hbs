@@ -1,5 +1,7 @@
 <h2>Would you like to add a new album to your collection?</h2>
 
+<LinkTo @route="my-collection">What's in my collection?</LinkTo>
+
 <BsForm @formLayout="horizontal" @model={{newAlbum}} @onSubmit={{action "submit"}} class="new-album-form" as |form|>
 
   <form.element @id="artist" @label="Artist Name" @placeholder="Artist" @property="artistName" @required={{true}} />
