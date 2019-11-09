@@ -1,1 +1,4 @@
-Let's get started
+<BsForm @formLayout="horizontal" @model={{this}} @onSubmit={{action "submit"}} as |form|>
+  <form.element @label="Album Name" @placeholder="Album" @property="albumName" @required={{true}} />
+  <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+</BsForm>
