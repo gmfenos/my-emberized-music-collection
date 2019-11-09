@@ -3,5 +3,10 @@ const { Model } = DS;
 
 export default Model.extend({
 
-    albumName: DS.attr()
+    artistName: DS.attr(),
+    albumName: DS.attr(),
+    genres: DS.attr(),
+    albumCoverUrl: DS.attr(),
+    yearOfRelease: DS.attr(),
+    spotifyLink: DS.attr()
 });
