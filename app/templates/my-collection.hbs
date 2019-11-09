@@ -1,1 +1,24 @@
-{{outlet}}
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Genres</th>
+      <th>Cover</th>
+      <th>Year of release</th>
+      <th>Spotify</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each albums as |album|}}
+      <tr>
+        <td>{{album.artistName}}</td>
+        <td>{{album.albumName}}</td>
+        <td>{{album.genres}}</td>
+        <td><a href={{album.albumCoverUrl}}>Cover</a></td>
+        <td>{{album.yearOfRelease}}</td>
+        <td><a href={{album.spotifyLink}}>Spotify</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
