@@ -1,0 +1,9 @@
+.new-album-form {
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+h2 {
+    margin: 20px 0;
+}

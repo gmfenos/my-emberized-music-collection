@@ -1,9 +1,16 @@
-<BsForm @formLayout="horizontal" @model={{newAlbum}} @onSubmit={{action "submit"}} as |form|>
+<h2>Would you like to add a new album to your collection?</h2>
+
+<BsForm @formLayout="horizontal" @model={{newAlbum}} @onSubmit={{action "submit"}} class="new-album-form" as |form|>
+
   <form.element @label="Artist Name" @placeholder="Artist" @property="artistName" @required={{true}} />
   <form.element @label="Album Name" @placeholder="Album" @property="albumName" @required={{true}} />
   <form.element @label="Genre(s)" @placeholder="Genre(s)" @property="genres" @required={{true}} />
   <form.element @label="Url to Album's Cover" @placeholder="Cover" @property="albumCoverUrl" @required={{true}} />
   <form.element @label="Year of Release" @placeholder="Year" @property="yearOfRelease" @required={{true}} />
   <form.element @label="Spotify Link" @placeholder="Spotify" @property="spotifyLink" @required={{true}} />
-  <BsButton @defaultText="Submit new album!" @type="primary" @buttonType="submit" />
+
+  <div align="right">
+    <BsButton @defaultText="Submit new album!" @type="primary" @buttonType="submit" />
+  </div>
+
 </BsForm>
