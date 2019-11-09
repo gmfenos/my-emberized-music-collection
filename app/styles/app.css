@@ -7,3 +7,12 @@
 h2 {
     margin: 20px 0;
 }
+
+.album-collection {
+    border: 1px solid #ced4da;
+    margin-top: 20px;
+}
+
+.album-collection .cell {
+    padding-left: 10px;
+}

@@ -1,23 +1,25 @@
-<table>
+<h2>Your album collection</h2>
+
+<table class="album-collection" border="1">
   <thead>
     <tr>
-      <th>Artist</th>
-      <th>Album</th>
-      <th>Genres</th>
-      <th>Cover</th>
-      <th>Year of release</th>
-      <th>Spotify</th>
+      <th></th>
+      <th width="20%" class="cell">Artist</th>
+      <th width="40%" class="cell">Album</th>
+      <th width="20%" class="cell">Genres</th>
+      <th width="10%" class="cell">Year of release</th>
+      <th width="10%" class="cell">Spotify</th>
     </tr>
   </thead>
   <tbody>
     {{#each albums as |album|}}
       <tr>
-        <td>{{album.artistName}}</td>
-        <td>{{album.albumName}}</td>
-        <td>{{album.genres}}</td>
-        <td><a href={{album.albumCoverUrl}}>Cover</a></td>
-        <td>{{album.yearOfRelease}}</td>
-        <td><a href={{album.spotifyLink}}>Spotify</a></td>
+        <td><img src={{album.albumCoverUrl}} alt="cover" width="100px" height="100px"></td>
+        <td class="cell">{{album.artistName}}</td>
+        <td class="cell">{{album.albumName}}</td>
+        <td class="cell">{{album.genres}}</td>
+        <td class="cell">{{album.yearOfRelease}}</td>
+        <td class="cell"><a href={{album.spotifyLink}}>Spotify</a></td>
       </tr>
     {{/each}}
   </tbody>
