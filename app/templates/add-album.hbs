@@ -2,15 +2,15 @@
 
 <BsForm @formLayout="horizontal" @model={{newAlbum}} @onSubmit={{action "submit"}} class="new-album-form" as |form|>
 
-  <form.element @label="Artist Name" @placeholder="Artist" @property="artistName" @required={{true}} />
-  <form.element @label="Album Name" @placeholder="Album" @property="albumName" @required={{true}} />
-  <form.element @label="Genre(s)" @placeholder="Genre(s)" @property="genres" @required={{true}} />
-  <form.element @label="Url to Album's Cover" @placeholder="Cover" @property="albumCoverUrl" @required={{true}} />
-  <form.element @label="Year of Release" @placeholder="Year" @property="yearOfRelease" @required={{true}} />
-  <form.element @label="Spotify Link" @placeholder="Spotify" @property="spotifyLink" @required={{true}} />
+  <form.element @id="artist" @label="Artist Name" @placeholder="Artist" @property="artistName" @required={{true}} />
+  <form.element @id="album" @label="Album Name" @placeholder="Album" @property="albumName" @required={{true}} />
+  <form.element @id="genres" @label="Genre(s)" @placeholder="Genre(s)" @property="genres" @required={{true}} />
+  <form.element @id="cover" @label="Url to Album's Cover" @placeholder="Cover" @property="albumCoverUrl" @required={{true}} />
+  <form.element @id="year" @label="Year of Release" @placeholder="Year" @property="yearOfRelease" @required={{true}} />
+  <form.element @id="spotify" @label="Spotify Link" @placeholder="Spotify" @property="spotifyLink" @required={{true}} />
 
   <div align="right">
-    <BsButton @defaultText="Submit new album!" @type="primary" @buttonType="submit" />
+    <BsButton @id="submit" @defaultText="Submit new album!" @type="primary" @buttonType="submit" />
   </div>
 
 </BsForm>

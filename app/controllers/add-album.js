@@ -12,7 +12,9 @@ export default Controller.extend({
 
     actions: {
         submit() {
-            this.get('newAlbum').save();
+            this.get('newAlbum').save().then(() => {
+                this.transitionToRoute('my-collection');
+            });
         }
     }
 });

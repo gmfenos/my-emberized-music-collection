@@ -5,4 +5,8 @@ export default function() {
     this.post('/albums', (schema, request) => {
         return schema.albums.create(request.requestBody);
     });
+
+    this.get('/albums', (schema) => {
+      return schema.albums.all();
+  });
 }
